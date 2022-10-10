@@ -1,0 +1,33 @@
+<p>Pessoa</p>
+
+<div class="Formulario">
+
+    <div>
+
+        <span>Nome</span><br />
+        <input [(ngModel)]="Pessoa.Nome" />
+    </div>
+    <div>
+
+        <span>CPF</span><br />
+        <input [(ngModel)]="Pessoa.CPF" />
+    </div>
+    <div>
+
+        <span>RG</span><br />
+        <input [(ngModel)]="Pessoa.RG" />
+    </div>
+    <div>
+
+        <span>Telefone</span><br />
+        <input [(ngModel)]="Pessoa.Telefone" />
+    </div>
+
+    <div (click)="Salvar()" style="cursor: pointer;">Salvar</div>
+
+    {{Service.Listar().length}}
+
+    <div *ngFor="let Item of Service.Listar()" >
+        {{Item.Nome}}
+    </div>
+</div>
